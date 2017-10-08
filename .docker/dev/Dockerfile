@@ -16,10 +16,9 @@ USER jovyan:users
 RUN git clone https://github.com/gibiansky/IHaskell\
 	&& cd IHaskell\
 	&& stack install --install-ghc cabal-install\
-	&& stack init --solver\
 	&& stack install gtk2hs-buildtools\
 	&& stack install --fast\
 	&& ihaskell install --stack
 
-CMD ["stack", "exec", "jupyter", "--", "notebook"]
+CMD ["stack", "exec", "jupyter", "--", "notebook", "--NotebookApp.token=''"]
 EXPOSE 8888
