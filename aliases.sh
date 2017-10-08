@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias tree="tree -a -I '.git'"
+alias tree="tree -a -I '.git|.ipynb_checkpoints'"
 
 container() {
 	# Turn the arguments into a path relative to `.docker`
